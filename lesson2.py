@@ -83,3 +83,40 @@ answer.append('C')
 
 print(chose_from_two)
 print(answer)
+
+x = {'a': 1}
+y = x
+y['a'] = 1000
+
+print(x)
+print(y)
+
+x = {'a': 1}
+y = x.copy()
+y['a'] = 1000
+
+print(x)
+print(y)
+
+l = [
+      ['apple', 100],
+      ['banana', 200],
+      ['orange', 300],
+]
+
+
+fruits = {
+      'apple': 100,
+      'banana': 200,
+      'orange': 300,
+}
+
+print(fruits['apple'])
+
+my_friends = {'A', 'C', 'D'}
+A_friends = {'B', 'D', 'E', 'F'}
+print(my_friends & A_friends)
+
+f = ['apple', 'banana', 'apple', 'banana']
+kind = set(f)
+print(kind)

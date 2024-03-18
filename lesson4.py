@@ -270,3 +270,56 @@ g = (i for i in range(10) if i % 2 == 0)
 
 for x in g:
     print(x)
+
+
+    """
+    Test Test #######################
+    """
+animal = 'cat'
+
+def f():
+    """Test func doc"""
+    print(f.__name__)
+    print(f.__doc__)
+
+f()
+print('global:', __name__)
+
+animal = 'cat'
+
+def func():
+    animal = 'doc'
+    print('local:', animal)
+
+func()
+print('global:', animal)
+
+l = [1, 2, 3]
+i = 5
+
+try:
+    l[i]
+except IndexError as exc:
+    print("Don't worry: {}".format(exc))
+except NameError as exc:
+    print(exc)
+except Exception as exc:
+    print('other:{}'.format(exc))
+else:
+    print('done')
+finally:
+    print('clean up')
+
+class UppercaseError(Exception):
+    pass
+
+def check():
+    words = ['APPLE', 'orange', 'banana']
+    for word in words:
+        if word.isupper():
+            raise UppercaseError(word)
+
+try:
+    check()
+except UppercaseError as exc:
+    print('This is my fault. Go next')
